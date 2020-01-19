@@ -2,7 +2,6 @@
 %Written by Brian Caskey
 %1/18/2020
 
-%todo - insert input variables into function line
 
 function [u_dot, v_dot, w_dot, p_dot, q_dot, r_dot, phi_dot, theta_dot, psi_dot, X_dot, Y_dot, h_dot] = eqOfMotion(q_bar, c_bar, Cl, Cn, Cm, m, S, b, T, theta, phi, psi, u, v, w, p, q, r, Cx, Cy, Cz, Ixx, Iyy, Izz, Ixz)
 g = 32.2; %ft/s^2
