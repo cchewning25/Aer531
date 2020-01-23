@@ -2,7 +2,7 @@
 %Written by Brian Caskey
 %1/18/2020
 
-
+% function X_dot = eqOfMotion(X,)
 function [u_dot, v_dot, w_dot, p_dot, q_dot, r_dot, phi_dot, theta_dot, psi_dot, X_dot, Y_dot, h_dot] = eqOfMotion(q_bar, c_bar, Cl, Cn, Cm, m, S, b, T, theta, phi, psi, u, v, w, p, q, r, Cx, Cy, Cz, Ixx, Iyy, Izz, Ixz)
 g = 32.2; %ft/s^2
 
@@ -31,10 +31,11 @@ A  =   [cos(theta)*cos(psi)     sin(phi)*sin(theta)*cos(psi) - cos(phi)*sin(psi)
         cos(theta)*sin(psi)     sin(phi)*sin(theta)*sin(psi) + cos(phi)*cos(psi)    cos(phi)*sin(theta)*sin(psi) - sin(phi)*cos(psi);
             sin(theta)                       -sin(phi)*cos(theta)                                -cos(phi)*cos(theta);               ];
 
-B = A*[u;v;w];
-X_dot = B(1);
-Y_dot = B(2);
-h_dot = B(3);
+[X_dot; Y_dot; h_dot] = A*[u;v;w]; = B(1);
+
+
   
+x_dot = [u_dot; v_dot; w_dot; p_dot; q_dot; r_dot; phi_dot; theta_dot; psi_dot; X_dot; Y_dot; h_dot];
+
 
 end

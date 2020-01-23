@@ -1,11 +1,10 @@
-%Aer 351 Code 
-%Written by Brian Caskey
-%1/18/2020
+%% Aer 351 Code 
+% Written by Brian Caskey
+% 1/18/2020
 
 clear,clc,close all
 
-% AIRCRAFT PROPERTIES
-%===================================================
+%% AIRCRAFT PROPERTIES
 weight = 12000; %lb
 Ixx = 2620; %slug-ft^2
 Iyy = 30300; %slug-ft^2
@@ -16,6 +15,13 @@ Iyz = 0; %slug-ft^2
 S = 173.82; %ft^2 - Wing ref area
 b = 25.25; %ft - wingspan
 c_bar = 7.73; %ft - mean aerodynamic chord
+
+
+%% STATE VECTOR
+% x = [p q r p_dot q_dot r_dot phi theta psi x y z]
+
+%% CONTROL VECTOR
+
 
 
 
